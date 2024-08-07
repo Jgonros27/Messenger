@@ -1,0 +1,485 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establece la altura mínima de la página y del contenedor principal para ocupar toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Permite que el contenido principal se expanda para llenar el espacio disponible */
+    overflow: auto; /* Evita el scroll en el contenido principal */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody {
+    max-height: 100px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border: 1px solid #ddd; /* Añade un borde para que el contenedor sea visible */
+    margin-bottom: 1rem; /* Espacio debajo del contenedor */
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.notification-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    transform: translateY(-50%);
+}
+
+/* Estilos para la tabla */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    opacity: 0.8;
+    transition: transform 0.3s;
+}
+
+td svg:hover {
+    transform: scale(1.6);
+}
+
+/* Añade un scroll a la tabla si es necesario */
+#agenda {
+    overflow-y: auto; /* Habilita el scroll vertical */
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#login-form{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin: 0 auto;
+    .form-wrapper {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .form-wrapper h2 {
+        margin-bottom: 1rem;
+        color: #4a90e2;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    
+    .form-group input[type="text"]:focus,
+    .form-group input[type="password"]:focus {
+        border-color: #4a90e2;
+        outline: none;
+    }
+    
+    .error {
+        color: red;
+        font-size: 0.875rem;
+        display: block;
+        margin-top: 0.5rem;
+    }
+    
+    .boton {
+        background-color: #4a90e2;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .boton:hover {
+        background-color: #357abd;
+        transform: scale(1.05);
+    }
+    
+    .boton:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+    }
+}
+
+/* Header */
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative; /* Asegura que el header esté posicionado correctamente */
+}
+
+header h1 {
+    font-size: 2rem; /* Tamaño del texto del título */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    color: #333;
+}
+
+#menu {
+    margin-top: 1rem; /* Espacio superior para separar del título */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: #4a90e2;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Formularios */
+/* Estilos generales del formulario */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group .error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus, form textarea:focus {
+    border-color: #4a90e2;
+}
+
+/* Botones */
+.boton {
+    background-color: #4a90e2; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones para efectos de hover */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para el texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.boton:hover {
+    background-color: #357abd; /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Ampliación ligera del botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+}
+
+.boton:focus {
+    outline: none; /* Quita el borde de enfoque por defecto */
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3); /* Sombra alrededor del botón al estar en foco */
+}
+
+/* Estilos para los enlaces */
+
+#enlaces {
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    gap: 1rem; /* Espacio entre los enlaces */
+}
+
+#enlaces a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: inherit; /* Hereda el color del texto del padre (en este caso, blanco) */
+}
+
+#enlaces .apartado {
+    background-color: #357abd; /* Color de fondo para cada opción del menú */
+    color: white; /* Color del texto */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    position: relative;
+    border-radius: 4px; /* Esquinas redondeadas */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones para efectos de hover */
+}
+
+#enlaces .apartado:hover {
+    background-color: #14365d; /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Ampliación ligera del enlace */
+}
+
+#enlaces .logout {
+    background-color: #e94e77; /* Color de fondo diferente para el botón de logout */
+}
+
+#enlaces .logout:hover {
+    background-color: #d43f5e; /* Color de fondo al pasar el cursor sobre el botón de logout */
+}
+
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Mensajes */
+#tablaMensajes .mensaje, #viewMessage .apartado {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+#tablaMensajes .apartado:hover {
+    background-color: #f9f9f9;
+}
+
+.noLeido {
+    background-color: #ffe7e7;
+}
+
+/* Estilos para la vista del mensaje */
+.view-message {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.message-header .date,
+.message-header .time {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.message-subject h2 {
+    margin-bottom: 1rem;
+    color: #4a90e2;
+}
+
+.message-body {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.reply-section {
+    margin-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.reply-section h3 {
+    margin-bottom: 0.5rem;
+    color: #4a90e2;
+}
+
+.reply-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-section textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.reply-section .boton {
+    align-self: flex-start;
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.reply-section .boton:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reply-section .boton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+
+/* Nuevos contactos */
+
+#tablaNewAccount #newAccount {
+    display: flex;
+    flex-direction: column;
+}
+
+#tablaNewAccount #newAccount .apartado{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+#tablaNewAccount .accounts {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+#tablaNewAccount #newAccount a {
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+#tablaNewAccount #newAccount a:hover {
+    background-color: #f1f1f1;
+}
+
+/* SweetAlert2 */
+.swal2-popup {
+    border-radius: 8px;
+}
+
